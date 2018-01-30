@@ -1,0 +1,10 @@
+<% provide(:button_text, 'Save changes') %>
+
+<h1>Update worker information</h1>
+
+<%= render 'form' %>
+
+<hr>
+
+<%= link_to "delete", @worker, method: :delete,
+                                  data: { confirm: "Are you sure?" } %>

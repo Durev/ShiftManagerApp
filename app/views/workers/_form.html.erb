@@ -1,0 +1,17 @@
+<%= form_for(@worker) do |f| %>
+  <%= render 'shared/error_messages' %>
+
+  <%= f.label :first_name %>
+  <%= f.text_field :first_name, class: 'form-control' %>
+
+  <%= f.radio_button :status, "medic" %>
+  <%= f.label :status_medic, "Medic" %>
+
+  <%= f.radio_button :status, "interne" %>
+  <%= f.label :status_interne, "Interne" %>
+
+  <%= f.radio_button :status, "interim" %>
+  <%= f.label :status_interim, "Interim" %>
+
+  <%= f.submit yield(:button_text), class: "btn btn-primary" %>
+<% end %>
