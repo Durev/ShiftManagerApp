@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+house:
+  status: medic
+  first_name: MyString
+
+cameron:
+  status: interne
+  first_name: MyString
