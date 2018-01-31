@@ -5,7 +5,7 @@
 
 /* Universal */
 body {
-  padding-top: 60px;
+  padding-top: 67px;
   background-color: #2c3e50;
   color: #ecf0f1;
 }
@@ -14,7 +14,20 @@ h2 {
   text-align: center;
 }
 
-/* header */
+.main {
+  max-width: 500px;
+  float: none;
+  margin: 15px auto;
+  background-color: #34495e;
+  padding: 12px;
+  border-radius: 15px;
+  text-align: center;
+  h3 {
+    color: #c23616;
+  }
+}
+
+/* Header */
 
 #logo-text {
   float: left;
@@ -56,14 +69,36 @@ form {
     max-width: 70%;
     margin: auto;
   }
+
+  select {
+    color: #2c3e50;
+    max-width: 70%;
+    margin: auto;
+  }
 }
 
 .form-title {
   color: #34ace0;
 }
 
-/* Workers index */
-.workers-list {
+.note {
+  text-align: center;
+}
+
+/* Home */
+#background-title {
+  padding: 120px 0;
+  color: white;
+  background-image: linear-gradient(rgba(1, 50, 67, 0.2), rgba(1, 50, 67, 0.4)),
+                  url("https://picsum.photos/1600/800?image=366");
+  background-size: cover;
+}
+
+/* Workers and Shifts index */
+.list {
+  width: 60%;
+  min-width: 280px;
+  margin: auto;
   background-color: #34495e;
   border-radius: 15px;
   padding: 8px;
@@ -72,7 +107,7 @@ form {
   }
 }
 
-.worker {
+.worker, .shift {
   text-align: center;
   padding: 8px 20px;
   margin: 3px;
@@ -80,6 +115,13 @@ form {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.shift {
+  background-color: #2f3640;
+  span {
+    margin: 0 12px;
+  }
 }
 
 .medic {
@@ -108,4 +150,19 @@ form {
 
 .edit-head {
   margin-top: 100px;
+}
+
+/* Improve responsiveness on small devices */
+@media (max-width: $screen-sm-min) {
+  .logo {
+    display: none;
+  }
+
+  body {
+    padding-top: 100px;
+  }
+
+  li {
+    text-align: center;
+  }
 }

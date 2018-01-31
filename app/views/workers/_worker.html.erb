@@ -1,4 +1,4 @@
-<%= tag.div class: ["col-md-12", "worker", worker.status] do %>
+<%= tag.div class: ["worker", worker.status] do %>
   <b><%= worker.first_name.capitalize %></b>
 
   <span>
@@ -13,6 +13,10 @@
     <% else %>
       <i class="fa fa-ambulance fa-2x"></i>
     <% end %>
+  </span>
+
+  <span>
+    <%= worker.shifts.count %> shift(s) planned
   </span>
 
   <%= link_to "Edit", edit_worker_path(worker), class: "btn btn btn-warning" %>

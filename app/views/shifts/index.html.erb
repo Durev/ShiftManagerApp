@@ -1,0 +1,18 @@
+<% provide(:button_text, 'Create') %>
+
+<div class="row index-head">
+  <h2>Add a new shift <i class="fa fa-calendar"></i></h2>
+
+  <% unless @workers.empty? %>
+    <%= render 'form' %>
+  <% else %>
+    <div class="main">
+      <h3>Please add some workers first</h3>
+    </div>
+  <% end %>
+</div><!-- /row -->
+
+<h2>Shifts list</h2>
+<div class="row list">
+  <%= render @shifts %>
+</div><!-- /row -->

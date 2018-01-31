@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
-  get 'workers/index'
+  root 'static_pages#home'
   resources :workers
+  resources :shifts, only: [:create, :index, :destroy]
 end

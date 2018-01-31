@@ -1,0 +1,18 @@
+<div class="row" id="background-title">
+  <h1 class="text-center">Welcome to Night Shift Manager</h1>
+  <h5 class="text-center">Manage your medic staff and its shifts</h5>
+</div><!-- /row -->
+
+<div class="row">
+  <div class="main">
+    <h4>Add new workers and edit existing ones :</h4>
+    <%= link_to workers_path, class: "btn btn-lg btn-success" do %>
+        Workers <i class="fa fa-user-md fa-lg"></i>
+      <% end %>
+    <h4>Create and assign shifts :</h4>
+    <%= link_to shifts_path, class: "btn btn-lg btn-info" do %>
+        Shifts <i class="fa fa-calendar"></i>
+      <% end %>
+  </div>
+</div><!-- /row -->
+

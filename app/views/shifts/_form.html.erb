@@ -1,0 +1,18 @@
+<%= form_for(@shift) do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+
+  <div class="form-group">
+    <h4>- Start Date -</h4>
+    <%= f.date_select :start_date, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <h4>- Worker -</h4>
+
+    <%= f.select(:worker_id, Worker.all.collect { |w| [w.first_name, w.id] }) %>
+
+  </div>
+
+  <%= f.submit yield(:button_text), class: "btn btn-primary" %>
+<% end %>
+<p class="note">Please note that a worker can't have more than 1 shift on a given day.</p>

@@ -19,7 +19,7 @@ class WorkerCreationTest < ActionDispatch::IntegrationTest
                                              status: "medic"}}
     end
     follow_redirect!
-    assert_template 'workers/show'
+    assert_template 'workers/edit'
     assert_not flash.empty?
   end
 end

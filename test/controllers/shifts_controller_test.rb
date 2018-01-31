@@ -1,8 +1,8 @@
 require 'test_helper'
 
-class WorkersControllerTest < ActionDispatch::IntegrationTest
+class ShiftsControllerTest < ActionDispatch::IntegrationTest
   test "should get index" do
-    get workers_url
+    get shifts_url
     assert_response :success
   end
 

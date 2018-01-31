@@ -37,4 +37,12 @@ class WorkerTest < ActiveSupport::TestCase
     assert_not duplicate_worker.valid?
   end
 
+  test "associated shifts should be destroyed" do
+    @worker.save
+    @worker.shifts.create!(start_date: "2018-03-30")
+    assert_difference 'Shift.count', -1 do
+      @worker.destroy
+    end
+  end
+
 end

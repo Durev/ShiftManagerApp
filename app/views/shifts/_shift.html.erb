@@ -1,0 +1,5 @@
+<div class="shift">
+  <span>Start date : <%= shift.start_date %></span>
+  <span> Worker : <%= shift.worker.first_name %></span>
+  <span><%= link_to "X", shift, method: :delete, data: { confirm: "You sure?" }, class: "btn btn-danger btn-xs" %></span>
+</div>

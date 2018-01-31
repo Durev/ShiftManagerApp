@@ -22,7 +22,6 @@ class WorkersEditTest < ActionDispatch::IntegrationTest
     patch worker_path(@worker), params: { worker: { first_name: first_name,
                                                     status: status } }
     assert_not flash.empty?
-    assert_redirected_to @worker
     @worker.reload
     assert_equal first_name, @worker.first_name
     assert_equal status, @worker.status
