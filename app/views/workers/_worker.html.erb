@@ -1,3 +1,19 @@
-<li>
-  <%= link_to worker.first_name, worker %> - <%= worker.status %>
-</li>
+<%= tag.div class: ["col-md-12", "worker", worker.status] do %>
+  <b><%= worker.first_name.capitalize %></b>
+
+  <span>
+    <%= worker.status.capitalize %>
+
+    <!-- Add special icon -->
+    <% case worker.status %>
+    <% when "medic" %>
+      <i class="fa fa-stethoscope fa-2x"></i>
+    <% when "interne" %>
+      <i class="fa fa-graduation-cap fa-2x"></i>
+    <% else %>
+      <i class="fa fa-ambulance fa-2x"></i>
+    <% end %>
+  </span>
+
+  <%= link_to "Edit", edit_worker_path(worker), class: "btn btn btn-warning" %>
+<% end %>

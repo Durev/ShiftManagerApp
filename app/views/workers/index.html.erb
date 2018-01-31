@@ -1,12 +1,13 @@
 <% provide(:button_text, 'Create') %>
 
-<h1>Workers</h1>
-
+<div class="row index-head">
+  <h2>Add a new worker <i class="fa fa-user-md fa-lg" aria-hidden="true"></i>
+</h2>
   <%= render 'form' %>
+</div><!-- /row -->
 
-<hr>
-
-<ul class="workers">
+<h2>Workers list</h2>
+<div class="row workers-list">
   <%= render @workers %>
-</ul>
+</div><!-- /row -->
 

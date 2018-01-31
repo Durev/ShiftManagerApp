@@ -1,0 +1,111 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+/* Universal */
+body {
+  padding-top: 60px;
+  background-color: #2c3e50;
+  color: #ecf0f1;
+}
+
+h2 {
+  text-align: center;
+}
+
+/* header */
+
+#logo-text {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+
+#logo-text:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+#logo {
+  width: 50px;
+  margin: 8px 10px;
+}
+
+.nav {
+  padding-top: 9px;
+  padding-right: 12px;
+}
+
+/* Forms */
+form {
+  max-width: 500px;
+  float: none;
+  margin: 15px auto;
+  background-color: #34495e;
+  padding: 12px;
+  border-radius: 15px;
+  text-align: center;
+
+  input[type=text] {
+    color: #2c3e50;
+    max-width: 70%;
+    margin: auto;
+  }
+}
+
+.form-title {
+  color: #34ace0;
+}
+
+/* Workers index */
+.workers-list {
+  background-color: #34495e;
+  border-radius: 15px;
+  padding: 8px;
+  h3 {
+    text-align: center;
+  }
+}
+
+.worker {
+  text-align: center;
+  padding: 8px 20px;
+  margin: 3px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.medic {
+  background-color: #192a56;
+}
+
+.interne {
+  background-color: #273c75;
+}
+
+.interim {
+  background-color: #40739e;
+}
+
+.index-head {
+  margin: 40px 0;
+}
+
+/* Workers edit */
+.delete {
+  max-width: 500px;
+  float: none;
+  margin: 15px auto;
+  text-align: center;
+}
+
+.edit-head {
+  margin-top: 100px;
+}

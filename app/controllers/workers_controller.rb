@@ -12,7 +12,7 @@ class WorkersController < ApplicationController
     @worker = Worker.new(worker_params)
     if @worker.save
       flash[:success] = "Worker successfully created !"
-      redirect_to @worker
+      redirect_to edit_worker_path(@worker)
     else
       @workers = Worker.all
       render 'index'
@@ -27,7 +27,7 @@ class WorkersController < ApplicationController
     @worker = Worker.find(params[:id])
     if @worker.update_attributes(worker_params)
       flash[:success] = "Worker updated !"
-      redirect_to @worker
+      redirect_to edit_worker_path(@worker)
     else
       render 'edit'
     end

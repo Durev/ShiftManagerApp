@@ -1,10 +1,14 @@
 <% provide(:button_text, 'Save changes') %>
 
-<h1>Update worker information</h1>
+<div class="row edit-head">
+  <h2>Edit worker information</h2>
+  <%= render 'form' %>
+</div><!-- /row -->
 
-<%= render 'form' %>
-
-<hr>
-
-<%= link_to "delete", @worker, method: :delete,
-                                  data: { confirm: "Are you sure?" } %>
+<div class="row">
+  <div class="delete">
+    <%= link_to "Delete worker", @worker, method: :delete,
+                data: { confirm: "Are you sure?" },
+                class: ["btn", "btn-danger"] %>
+  </div>
+</div><!-- /row -->

@@ -1,0 +1,14 @@
+<header class="navbar navbar-fixed-top navbar-inverse">
+  <div class="container-fluid">
+    <%= link_to "#", id: "logo-text" do %>
+      <%= image_tag 'hospital.png', id: "logo" %> Night Shift Manager
+    <% end %>
+    <nav>
+      <ul class="nav navbar-nav navbar-right">
+        <li><%= link_to "Home",   '#' %></li>
+        <li><%= link_to "Shifts",   '#' %></li>
+        <li><%= link_to "Workers", workers_path %></li>
+      </ul>
+    </nav>
+  </div><!-- /container-fluid -->
+</header>
